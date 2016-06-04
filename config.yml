@@ -1,0 +1,30 @@
+#rpRanks by Bursty
+users:
+    Bursty:
+        permissions:
+            permissions.example: true
+        groups:
+        - owner
+groups:
+    Owner:
+        permissions:
+            permissions.build: true
+        inheritance:
+        - Admin
+    Admin:
+        permissions:
+            permissions.build: false
+        inheritance:
+        - Moderator
+    Moderator:
+        permissions:
+            permissions.build: false
+        inheritance:
+        - default
+    Default:
+        permissions:
+            permissions.build: false
+messages:
+    build: '&cYou do not have permission to build here.'
+
+debug: false
